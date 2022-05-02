@@ -11,6 +11,7 @@ public class Habilitado implements Estado {
 
         System.out.println(ANSI_BLUE
                 + espacamento
+                + "-"
                 + el.getNome()
                 + ANSI_RESET);
 

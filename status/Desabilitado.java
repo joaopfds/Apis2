@@ -11,6 +11,7 @@ public class Desabilitado implements Estado {
 
         System.out.println(ANSI_RED
                 + espacamento
+                + "-"
                 + el.getNome()
                 + ANSI_RESET);
 
