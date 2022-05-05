@@ -10,11 +10,6 @@ public class Main {
 
     private static void montaArvore(){
 
-        //Estado habilitado = new Habilitado();
-        //Estado desabilitado = new Desabilitado();
-
-        ArrayList<Elemento> vazio = new ArrayList<>();
-
         Elemento funcN = new Arquivo("Funcionaliade N", new Habilitado());
         Elemento funcO = new Arquivo("Funcionaliade O", new Habilitado());
         Elemento funcP = new Arquivo("Funcionaliade P", new Desabilitado());
@@ -24,21 +19,19 @@ public class Main {
         filhosMenu512.add(funcP);
 
         Elemento menu512 = new Pasta("Menu 5.1.2", new Habilitado(), filhosMenu512);
-        menu512.setElementos(filhosMenu512);
-        Elemento menu511= new Pasta("Menu 5.1.1", new Desabilitado(), vazio);
+        
+        Elemento menu511= new Pasta("Menu 5.1.1", new Desabilitado());
 
         ArrayList<Elemento> filhosMenu51 = new ArrayList<>();
         filhosMenu51.add(menu511);
         filhosMenu51.add(menu512);
 
         Elemento menu51 = new Pasta("Menu 5.1", new Habilitado(), filhosMenu51);
-        menu51.setElementos(filhosMenu51);
 
         ArrayList<Elemento> filhosMenu5 = new ArrayList<>();
         filhosMenu5.add(menu51);
 
         Elemento menu5 = new Pasta("Menu 5", new Habilitado(), filhosMenu5);
-        menu5.setElementos(filhosMenu5);
 
         // monta menu 4
 
@@ -49,7 +42,7 @@ public class Main {
         filhosMenu41.add(funcM);
 
         Elemento menu41 = new Pasta("Menu 4.1", new Habilitado(), filhosMenu41);
-        menu41.setElementos(filhosMenu41);
+        
         Elemento funcK = new Arquivo("Funcionaliade K", new Habilitado());
 
         ArrayList<Elemento> filhosMenu4 = new ArrayList<>();
@@ -57,11 +50,10 @@ public class Main {
         filhosMenu4.add(funcK);
 
         Elemento menu4 = new Pasta("Menu 4", new Habilitado(), filhosMenu4);
-        menu4.setElementos(filhosMenu4);
 
         // MONTA MENU 3
 
-        Elemento menu3 = new Pasta("Menu 3", new Desabilitado(), vazio);
+        Elemento menu3 = new Pasta("Menu 3", new Desabilitado());
 
         // MONTA MENU 2
 
@@ -75,7 +67,6 @@ public class Main {
         filhosMenu212.add(funcI);
 
         Elemento menu212 = new Pasta("Menu 2.1.2", new Habilitado(), filhosMenu212);
-        menu212.setElementos(filhosMenu212);
 
         Elemento funcE = new Arquivo("Funcionaliade E", new Desabilitado());
         Elemento funcF = new Arquivo("Funcionaliade F", new Habilitado());
@@ -140,6 +131,4 @@ public class Main {
     {
         montaArvore();
     }
-
-
 }

@@ -9,11 +9,10 @@ public class Habilitado implements Estado {
 
     public void escreveElemento(Elemento el, String espacamento){
 
-        System.out.println(ANSI_BLUE
-                + espacamento
-                + "-"
-                + el.getNome()
-                + ANSI_RESET);
+      System.out.println(ANSI_BLUE
+              + espacamento
+              + el.getNome()
+              + ANSI_RESET);
 
     }
 }
