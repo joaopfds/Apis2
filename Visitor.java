@@ -2,17 +2,24 @@ import menu.Elemento;
 
 public class Visitor {
 
-    public void percorreArvore(Elemento ele, String espaco){
+    public void percorreArvore(Elemento menuEle, String espaco){
 
-        ele.getStatus().escreveElemento(ele, espaco);
+        menuEle.getStatus().escreveElemento(menuEle, espaco);
 
         espaco = espaco + "  ";
 
-        for (Elemento el: ele.getElementos()) {
+      try{
+        
+        for (Elemento el: menuEle.getElementos()) {
+  
+              percorreArvore(el, espaco);
+  
+          }        
+      }
+      catch (Exception e) {
+        
+      }
 
-            percorreArvore(el, espaco);
-
-        }
     }
 
 }

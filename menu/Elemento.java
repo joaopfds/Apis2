@@ -42,7 +42,4 @@ public class Elemento {
         return elementos;
     }
 
-    public void setElementos(ArrayList<Elemento> elementos) {
-        this.elementos = elementos;
-    }
 }
